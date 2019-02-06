@@ -2,13 +2,13 @@
 #include <cstddef>
 
 namespace offsets {
-    constexpr std::ptrdiff_t team           = 0xf0;
-    constexpr std::ptrdiff_t flags          = 0x100;
-    constexpr std::ptrdiff_t incross        = 0xb2dc;
-    constexpr std::ptrdiff_t force_jump     = 0x50e33ac;
-    constexpr std::ptrdiff_t entity_list    = 0x4c40664;
-    constexpr std::ptrdiff_t force_attack   = 0x3081d40;
-    constexpr std::ptrdiff_t local_player   = 0xc638ac;
+    constexpr std::ptrdiff_t team           = 0xf4;
+    constexpr std::ptrdiff_t flags          = 0x104;
+    constexpr std::ptrdiff_t incross        = 0xb394;
+    constexpr std::ptrdiff_t force_jump     = 0x5170e70;
+    constexpr std::ptrdiff_t entity_list    = 0x4ccdcbc;
+    constexpr std::ptrdiff_t force_attack   = 0x30ff360;
+    constexpr std::ptrdiff_t local_player   = 0xcbd6b4;
 }
 
 int main()
@@ -48,7 +48,7 @@ int main()
         }
 
         for (auto i{ 1 }; i <= 64; ++i) {
-            memory.write(get_ent(i) + 0x38f4, 1000000.f);
+            memory.write(get_ent(i) + 0x395c, 1000000.f);
         }
 
         Sleep(7);
